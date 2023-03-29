@@ -22,7 +22,7 @@ app.get('/', (req,res)=>{
 app.post('/login', (req, res)=>{
     var username= req.body.username
     var password = req.body.password
-    var query = "SELECT title FROM user WHERE username = '" + username + "' AND password = " + password + "'";
+    var query = "SELECT title FROM user where username = '" + username + "' and password = '" + password + "'";
 
     console.log("UserName: " +username)
     console.log("Password: " + password)
@@ -41,3 +41,7 @@ app.post('/login', (req, res)=>{
     });
     
 })
+
+app.listen(3000, function () {
+    console.log("Express server listening on port 3000");
+    }); 

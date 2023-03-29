@@ -11,13 +11,6 @@
     <form action='/login' method='POST'>
         <div className='container'>
 
-            <script>
-                if(document.location.hash === '#unauthorized') {
-             document.write('<div class="unauthorized">Invalid Username or Password</div>');
-                } else if(document.location.hash === '#error') {
-             document.write('<div class="error">An error has occured</div>');
-                }
-              </script>
              
           <label>Named</label> 
           <input type='text' name='username' required>
@@ -25,6 +18,14 @@
           <input type='password' name='password' required>
           <button>Submit</button>
         </div>
+        
+        <script>
+            if(document.location.hash === '#unauthorized') {
+         document.write('<div class="unauthorized">Invalid Username or Password</div>');
+            } else if(document.location.hash === '#error') {
+         document.write('<div class="error">An error has occured</div>');
+            }
+          </script>
       </form>
 </body>
 </html>
