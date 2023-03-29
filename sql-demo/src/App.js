@@ -5,10 +5,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <form action='/login' method='POST'>
-          Name: <input type='text'></input>
-          <input type='submit'></input>
-        </form>
+        
+          <form action='/login' method='POST'>
+            <div className='container'>
+              Name: <input type='text'></input>
+              Password: <input type='text'></input>
+              <button>Submit</button>
+            </div>
+          </form>
+  
       </header>
     </div>
   );
